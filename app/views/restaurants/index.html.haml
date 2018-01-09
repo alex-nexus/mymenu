@@ -1,0 +1,19 @@
+%h1 Listing restaurants
+
+%table.table.table-striped.table-bordered
+	%tr
+		%th Name  
+		%th Open hours  
+		%th Address  
+		%th Phone  
+		%th   
+	
+	- @restaurants.each do |restaurant|  
+		%tr 
+		%td=restaurant.name   
+		%td=restaurant.open_hours   
+		%td=restaurant.address   
+		%td=restaurant.phone   
+		%td=link_to 'Show', restaurant   
+	 
+= paginate @restaurants

@@ -1,0 +1,25 @@
+production:
+  sessions:
+    default:
+      database: noah_prod
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong
+  
+development:
+  sessions:
+    default:
+      database: noah_dev
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong  
+test:
+  sessions:
+    default:
+      database: noah_test
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong

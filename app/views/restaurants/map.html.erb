@@ -1,0 +1,35 @@
+<script>
+	function show_map(position) {
+		var latitude = position.coords.latitude;
+		var longitude = position.coords.longitude;
+		// let's show a map or do something interesting!
+		$.cookie("latitude", latitude, {
+			expires : 10,
+		});
+		$.cookie("longitude", longitude, {
+			expires : 10,
+		});
+		alert('longitude:' + $.cookie("longitude") + ' latitude:' + $.cookie("latitude"));
+	}
+
+	function get_location() {
+		navigator.geolocation.getCurrentPosition(show_map);
+	}
+
+	get_location(); 
+</script>
+
+<%= form_tag("/restaurants/map", :method => "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "City:") %>
+  <%= text_field_tag(:city) %>
+  <%= label_tag(:q, "State:") %>
+  <%= text_field_tag(:region) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<%= gmaps("markers" => {"data" => @markers,
+	"map_options" => { "zoom" => 5, "auto_adjust" => true, "center_on_user" => true,
+						:container_class => "map_container", :id => "map"}}) %>
+

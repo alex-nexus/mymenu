@@ -1,0 +1,3 @@
+'American','French','Asian','Greek','Indian','South American','Italian','Japanese',
+        'Cantonese','Korean','Spanish','Caribbean','Szechwan Chinese','Latin American','Taiwanese','Lebanese',
+        'Thai','Mandarin','Turkish','Mediterranean','Vietnamese','Mexican'

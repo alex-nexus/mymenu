@@ -1,0 +1,15 @@
+production:
+  host: localhost
+  database: noahcastle_production
+  port: 27017
+  
+development:
+  host: localhost
+  database: noahcastle_dev
+  port: 27017
+  
+test:
+  host: localhost
+  database: noahcastle_test
+  port: 27017
+  
